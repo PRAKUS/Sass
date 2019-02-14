@@ -1,3 +1,16 @@
+$fontSize:(
+banner:60px,
+body:20px,
+cardHeader:26px,
+subHeader:30px
+
+
+
+);
+@function FontSize($fontsize)
+    {
+        @return map-get($fontSize,$fontsize);
+    };
 $fontfamily:
     (
         banner: "Lato",
@@ -27,8 +40,7 @@ $color:
        color4: #0A0F0D,
        header2: #454F63,
        color6: #999999
-       custom_white:#FBF7FF;
-
+      
     );
 @function Color($Color)
     {
@@ -39,7 +51,7 @@ $backgroundColor:
         button: #8514E8,
         background-color: #FBF7FF,
         background-color2: #FFFFFF
-
+        
     );
 @function BackGroundColor($background-color)
     {
@@ -49,18 +61,17 @@ $ShadowColor:
     (
     main: 0px 0px 10px 0px #070707,
     navBar: 0px 0px 10px 0px #6900F3
-    );
+    );   
 @function Shadow($ShadowSelector)
     {
-        @return map-get($ShadowColor,$ShadowSelector);
+        @return map-get($ShadowColor,$ShadowSelector); 
     }
-$padding:20px 30px 20px 20px;
-
+    
 .ord{
 	font-family:FontFamily(banner);
 	font-weight:FontWeight(banner);
 	display: inline;
-	font-size: 60px;
+	font-size:FontSize(banner);
 }
 .exord{
 	@extend .ord;
@@ -69,15 +80,15 @@ $padding:20px 30px 20px 20px;
 .side{
 	font-family:FontFamily(body);
         color:Color(body);
-	font-size: 20px;
+	font-size:FontSize(family);
 	opacity: 0.6;
 }
 .topics{
 	font-family: FontFamily(header);
 	color: Color(header);
-	font-size: 26px;
+	font-size: FontSize(cardHeader);
 	padding-bottom: 10px;
-	padding-top: $padding;
+	padding-top: 20px;
 	border-top-right-radius: 30px;
 	border-top-left-radius: 30px;
 }
@@ -89,7 +100,7 @@ $padding:20px 30px 20px 20px;
 .icop{
 	@extend .icox;
 	height: 60px;
-
+	
 }
 .ico{
 	width: 100px;
@@ -115,7 +126,7 @@ $padding:20px 30px 20px 20px;
 	font-size: 36px;
 }
 .panel-full{
-
+    
 	border-radius: 30px;
 	box-shadow: 0px 12px 36px 0px #F1F1F8;
 }
@@ -123,7 +134,7 @@ $padding:20px 30px 20px 20px;
 	font-family:FontFamily(header);
 	font-weight: FontWeight(header);
 	color:Color(header);
-	padding-left: $padding;
+	padding-left: 20px;
 	display: inline;
 	font-size: 18px;
 }
@@ -133,12 +144,12 @@ $padding:20px 30px 20px 20px;
 	font-weight: FontWeight(banner)
 }
 .price{
-	font-size: 30px;
+	font-size:FontSize(subHeader);
 	font-family:FontFamily(header);
 	font-weight:FontWeight(body);
 }
 .detail{
-	padding-left: 26px;
+	padding-left:26px;
 	font-family:FontFamily(banner);
 	font-weight: FontWeight(banner);
 	display: inline-block;
@@ -158,17 +169,17 @@ $padding:20px 30px 20px 20px;
 	width: 750px;
 	height: 500px;
 	position: absolute;
-	right: 0;
+	right: 0; 
     top: 0;
 }
 .offer{
 	font-family: FontFamily(banner);
 	font-weight: FontWeight(banner);
-	font-size: 60px;
+	font-size:FontSize(banner);
 }
 .info{
 	@extend .offer;
-	font-size: 20px;
+	font-size:FntSize(body);
 }
 .exico{
 	width: 130px;
@@ -188,7 +199,7 @@ $padding:20px 30px 20px 20px;
 }
 .des{
 	font-family: FontFamily(body);
-	font-size: 30px;
+	font-size:FontSize(subHeader);
 	font-weight: FontWeight(banner);
 }
 .head-detail{
@@ -196,21 +207,21 @@ $padding:20px 30px 20px 20px;
 	font-weight:FontWeight(banner);
 	color: Color(header);
 	padding-left: 20px;
-	font-size: 26px;
+	font-size:FontSize(cardHeader);
 }
 .panel-default>.round{
 	border-radius: 30px;
-	background-color: colour(background-color);
+	background-color: #FBF7FF;
 	border-color: transparent;
 }
 .fa-angle-down{
 	float: right;
-	padding-right: $padding;
+	padding-right:FontSize(body);
 	padding-top: 8px;
 }
 .leaf{
 	font-family: FontFamily(body);
-	font-size: 20px;
+	font-size: FontSize(body);
 	font-weight: FontWeight(body);
 	padding-left: 50px;
 }
@@ -218,7 +229,7 @@ $padding:20px 30px 20px 20px;
 	font-family:  FontFamily(header);
 	font-weight: FontWeight(header);
 	color:Color(header);
-	font-size: 20px;
+	font-size:FontSize(body);
 }
 .marker{
 	list-style-position: inside;
@@ -227,7 +238,7 @@ $padding:20px 30px 20px 20px;
 	border-radius: 30px;
 	margin-bottom: 0;
 	margin: 20px;
-	background-color: colour(background-color);
+	background-color: #FBF7FF;
 }
 .foot{
 	border-top-right-radius: 20%;
@@ -236,7 +247,7 @@ $padding:20px 30px 20px 20px;
 }
 .hire{
 	font-family:  FontFamily(header);
-	font-size: 30px;
+	font-size:FontSize(subHeader);
 	font-weight: 700;
 	color:Color(header2);
 }
@@ -253,32 +264,32 @@ $padding:20px 30px 20px 20px;
 .bar{
 	width: 100%;
 	margin: 0;
-	background-color: BackGroundColor(background-color);
+	background-color: #FFFFFF;
 	box-shadow:ShadowColor(nav);
 }
 .head-title{
 	font-family:  FontFamily(header);
-	font-size: 15px;
-	font-weight:FontWeight(header) ;
+	font-size:FontSize(title);
+	font-weight:FontWeight(body) ;
 	color: Color(header)!important;
 	padding-right: 30px !important;
-	padding-top: $padding !important;
+	padding-top: 20px !important;
 }
 .head-title-imp{
 	font-family:FontFamily(header);
-	font-size: 15px;
-	font-weight: 400;
+	font-size:FontSize(tittle);
+	font-weight:FontWeight(body);
 	color: #0A0F0D !important;
-	padding-right: $padding !important;
-	padding-top: $padding !important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;
 }
 .head-title-ex{
 	font-family: FontFamily(header);
 	font-size: 15px;
 	font-weight:FontWeight(body);
 	color: #6320EE !important;
-	padding-right: $padding !important;
-	padding-top: $padding !important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;	
 }
 .dropd{
 	margin-left: 10px;
@@ -304,13 +315,13 @@ $padding:20px 30px 20px 20px;
 }
 .test{
     font-family: FontFamily(header);
-    font-size: 30px;
+    font-size:FontSize(subHeader);
     color: #454F63;
 }
 .test1{
     font-family:FontFamily(header);
     font-size: 10px;
-    color: color(color6);
+    color: #999999;
 }
 .panel1{
     width: 350px;
