@@ -1,0 +1,374 @@
+$fontSize:(
+banner:60px,
+body:20px,
+cardHeader:26px,
+subHeader:30px
+);
+@function FontSize($fontsize)
+    {
+        @return map-get($fontSize,$fontsize);
+    };
+$fontfamily:
+    (
+        banner: "Lato",
+        body: "Source Sans Pro",
+        header: "Montserrat"
+    );
+@function FontFamily($font)
+    {
+        @return map-get($fontfamily,$font);
+    }
+$font-weight:
+    (
+        banner: 900,
+        body: 400,
+        header: 700,
+       
+    );
+@function FontWeight($font)
+    {
+        @return map-get($font-weight,$font);
+    }
+$color:
+    (
+       banner:#06E278,
+       body: #4E4786,
+       banner2: #FFFFFF,
+       color4: #0A0F0D,
+       color6: #999999,
+       header2: #454F63,
+       header: #404D6F,
+     
+      
+    );
+@function Color($Color)
+    {
+        @return map-get($color,$Color);
+    }
+$backgroundColor:
+    (
+        button: #8514E8,
+        background-color: #FBF7FF,
+        background-color2: #FFFFFF
+        
+    );
+@function BackGroundColor($background-color)
+    {
+        @return map-get($backgroundColor,$background-color);
+    }
+$ShadowColor:
+    (
+        main: 0px 0px 10px 0px #070707,
+        navBar: 0px 0px 10px 0px #6900F3
+    );   
+@function Shadow($ShadowSelector)
+    {
+        @return map-get($ShadowColor,$ShadowSelector); 
+    }
+.adjust{
+	padding-left: 10%;
+}
+.bar{
+	width: 100%;
+	margin: 0;
+	background-color: #FFFFFF;
+	box-shadow:ShadowColor(nav);
+}
+.button{
+        border: none;
+        box-shadow:Shadow(main);
+	border-radius: 25px;
+	background-color: BackGroundColor(button);
+	padding-left: 55px;
+	padding-right: 55px;
+	padding-top: 18px;
+	padding-bottom: 8px;
+	
+	
+}
+.carousel {
+    margin: 0 auto;
+    width:800px;
+    height: 300px;
+    display: relative;
+}
+.carousel img {
+    display: hidden;
+    cursor: pointer;
+}
+.com-ico{
+	width: 150px;
+	height: 35px;
+	margin: 20px;
+}
+.contain{
+	position: relative;
+}
+.cost{
+	font-family:FontFamily(header);
+	font-weight:FontWeight(header);
+	font-size: 36px;
+}
+.course{
+	font-family:FontFamily(header);
+	font-weight: FontWeight(header);
+	color:Color(header);
+	padding-left: 20px;
+	display: inline;
+	font-size: 18px;
+}
+
+.des{
+	font-family: FontFamily(body);
+	font-size:FontSize(subHeader);
+	font-weight: FontWeight(banner);
+}
+.detail{
+	font-family:FontFamily(banner);
+	font-weight: FontWeight(banner);
+        font-size: 16px;
+        padding-left:26px;
+	display: inline-block;
+	
+}
+.dropd{
+	margin-left: 10px;
+}
+.exico{
+	width: 130px;
+	height: 100px;
+	display: inline-block;
+}
+.exord{
+	@extend .ord;
+        color: Color(banner);
+}
+.ex-com-ico{
+	width: 70px;
+	height: 70px;
+	margin: 20px;
+}
+.fa-angle-down{
+	float: right;
+	padding-right:FontSize(body);
+	padding-top: 8px;
+}
+.foot{
+	border-top-right-radius: 20%;
+	border-top-left-radius: 20%;
+	background-image: linear-gradient(#F6F5FD,#FFFFFF);
+}
+.head-detail{
+	font-family: FontFamily(header);
+	font-weight:FontWeight(banner);
+        font-size:FontSize(cardHeader);
+	color: Color(header);
+	padding-left: 20px;
+	
+}
+.head-title{
+	font-family:  FontFamily(header);
+	font-size:FontSize(title);
+	font-weight:FontWeight(body) ;
+	color: Color(header)!important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;
+}
+.head-title-imp{
+	font-family:FontFamily(header);
+	font-size:FontSize(tittle);
+	font-weight:FontWeight(body);
+	color: #0A0F0D !important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;
+}
+.head-title-ex{
+	font-family: FontFamily(header);
+	font-size: 15px;
+	font-weight:FontWeight(body);
+	color: #6320EE !important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;	
+}
+.hire{
+	font-family:  FontFamily(header);
+	font-size:FontSize(subHeader);
+	font-weight: 700;
+	color:Color(header2);
+}
+.hh{
+	position: absolute;
+	top: 60%;
+	left: 15%;
+}
+.icox{
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+}
+.icop{
+	@extend .icox;
+	height: 60px;
+	
+}
+.ico{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+.info{
+	@extend .offer;
+	font-size:FntSize(body);
+}
+.inline
+{
+	display: inline-block;
+}
+.leaf{
+	font-family: FontFamily(body);
+	font-size: FontSize(body);
+	font-weight: FontWeight(body);
+	padding-left: 50px;
+}
+.lhead{
+	font-family:  FontFamily(header);
+	font-weight: FontWeight(header);
+        font-size:FontSize(body);
+	color:Color(header);
+	
+}
+.list-title{
+	font-family:FontFamily(header);
+	font-size: 15px;
+	font-weight:FontWeight(body);
+	color: #0A0F0D !important;
+}
+.marker{
+	list-style-position: inside;
+}
+
+.offer{
+	font-family: FontFamily(banner);
+	font-weight: FontWeight(banner);
+	font-size:FontSize(banner);
+}
+.ord{
+	font-family:FontFamily(banner);
+	font-weight:FontWeight(banner);
+	font-size:FontSize(banner);
+        display: inline;
+}
+.panel-default>.round{
+	border-radius: 30px;
+	background-color: #FBF7FF;
+	border-color: transparent;
+}
+.panel1{
+    width: 350px;
+    border: 0px;
+}
+.panel-inside{
+	border-radius: 30px;
+	margin-bottom: 0;
+	margin: 20px;
+	background-color: #FBF7FF;
+}
+
+.panel-full{
+    
+	border-radius: 30px;
+	box-shadow: 0px 12px 36px 0px #F1F1F8;
+}
+.pos{
+	float: left;
+}
+.price{
+	font-size:FontSize(subHeader);
+	font-family:FontFamily(header);
+	font-weight:FontWeight(body);
+}
+
+
+.same
+{
+	display: inline;
+}
+.sizeleft
+{
+	width: 450px;
+	height: 450px;
+}
+.sizeright
+{
+    width: 750px;
+    height: 500px;
+    position: absolute;
+    right: 0; 
+    top: 0;
+}
+.side{  
+        font-family:FontFamily(body);
+	font-size:FontSize(family);  
+        color:Color(body);
+	opacity: 0.6;
+}
+.small{ 
+        font-weight: FontWeight(banner);
+	font-family:FontFamily(banner);
+	color: Color(banner2);
+	
+}
+.shad{
+	box-shadow: 0px 0px 36px 5px #f2f2f2;
+}
+.test{
+    font-family: FontFamily(header);
+    font-size:FontSize(subHeader);
+    color: #454F63;
+}
+.test1{
+    font-family:FontFamily(header);
+    font-size: 10px;
+    color: #999999;
+}
+.topics{
+	font-family: FontFamily(header);
+	font-size: FontSize(cardHeader);
+	padding-bottom: 10px;
+	padding-top: 20px;
+        border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+        color: Color(header);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
